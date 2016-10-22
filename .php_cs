@@ -1,0 +1,32 @@
+<?php
+$finder = Symfony\CS\Finder\DefaultFinder::create()
+    ->exclude('system')
+    ->exclude('docroot')
+    ->exclude('application/cache')
+    ->exclude('application/logs')
+    ->exclude('application/views')
+    ->exclude('application/third_party')
+    ->in(__DIR__)
+;
+return Symfony\CS\Config\Config::create()
+    ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
+    ->fixers(array(
+        '-psr0',
+        '-array_element_no_space_before_comma',
+        '-blankline_after_open_tag',
+        '-concat_without_spaces',
+        '-declare_equal_normalize',
+        '-join_function',
+        '-pre_increment',
+        '-spaces_cast',
+        '-unalign_double_arrow',
+        '-unalign_equals',
+        'align_double_arrow',
+        'align_equals',
+        'concat_with_spaces',
+        'logical_not_operators_with_spaces',
+        'no_useless_else',
+        'no_useless_return',
+    ))
+    ->finder($finder)
+;
