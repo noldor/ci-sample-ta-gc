@@ -29,6 +29,8 @@ class User extends MY_Controller
                    ->fields('password', 'email', 'activated', 'banned', 'ban_reason', 'new_password_key',
                             'new_password_requested', 'new_email', 'new_email_key', 'last_ip', 'last_login',
                             'created', 'modified')
+                   ->field_type('ban_reason', 'text')
+                   ->unset_texteditor('ban_reason')
                    ;
         foreach ($validation_rules as $rule) {
             $this->crud->display_as($rule['field'], $rule['label']);
