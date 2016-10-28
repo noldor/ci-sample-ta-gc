@@ -12,9 +12,9 @@ class MY_Controller extends CI_Controller
 
         $this->load->library('tank_auth', null, 'auth');
 
-        // authコントローラ以外ではログインを要求する
-        if ( ! $this->auth->is_logged_in() && $this->router->class != 'auth') {
-            redirect('/auth/login/');
-        }
+        // このクラスを継承しているコントローラではログインを要求する
+//        if ( ! $this->auth->is_logged_in()) {
+//            redirect('/auth/login/');
+//        }
     }
 }
