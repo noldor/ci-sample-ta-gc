@@ -26,7 +26,7 @@ class User extends MY_Controller
         $this->crud->set_table('users')
                    ->set_subject('ユーザ')
                    ->columns('id', 'email', 'activated', 'banned', 'last_login', 'created')
-                   ->fields('id', 'password', 'email', 'activated', 'banned', 'ban_reason', 'new_password_key',
+                   ->fields('password', 'email', 'activated', 'banned', 'ban_reason', 'new_password_key',
                             'new_password_requested', 'new_email', 'new_email_key', 'last_ip', 'last_login',
                             'created', 'modified')
                    ;
