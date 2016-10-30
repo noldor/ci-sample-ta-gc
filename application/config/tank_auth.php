@@ -1,4 +1,6 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -7,7 +9,7 @@
 | These details are used in emails sent by authentication library.
 |--------------------------------------------------------------------------
 */
-$config['website_name'] = 'tank_auth / groceryCRUDサンプル';
+$config['website_name']    = 'tank_auth / groceryCRUDサンプル';
 $config['webmaster_email'] = 'aki@noldor.info';
 
 /*
@@ -19,7 +21,7 @@ $config['webmaster_email'] = 'aki@noldor.info';
 | 'phpass_hash_strength' = Password hash strength.
 |--------------------------------------------------------------------------
 */
-$config['phpass_hash_portable'] = FALSE;
+$config['phpass_hash_portable'] = false;
 $config['phpass_hash_strength'] = 8;
 
 /*
@@ -39,12 +41,12 @@ $config['phpass_hash_strength'] = 8;
 | 'password_max_length' = Max length of user's password.
 |--------------------------------------------------------------------------
 */
-$config['allow_registration'] = TRUE;
-$config['captcha_registration'] = true;
-$config['email_activation'] = true;
-$config['email_activation_expire'] = 60*60*24*2;
-$config['email_account_details'] = TRUE;
-$config['use_username'] = TRUE;
+$config['allow_registration']      = true;
+$config['captcha_registration']    = true;
+$config['email_activation']        = true;
+$config['email_activation_expire'] = 60 * 60 * 24 * 2;
+$config['email_account_details']   = true;
+$config['use_username']            = true;
 
 $config['username_min_length'] = 4;
 $config['username_max_length'] = 20;
@@ -68,13 +70,13 @@ $config['password_max_length'] = 20;
 | 'login_attempt_expire' = Time to live for every attempt to login. Default is 24 hours (60*60*24).
 |--------------------------------------------------------------------------
 */
-$config['login_by_username'] = TRUE;
-$config['login_by_email'] = TRUE;
-$config['login_record_ip'] = TRUE;
-$config['login_record_time'] = TRUE;
-$config['login_count_attempts'] = TRUE;
-$config['login_max_attempts'] = 5;
-$config['login_attempt_expire'] = 60*60*24;
+$config['login_by_username']    = true;
+$config['login_by_email']       = true;
+$config['login_record_ip']      = true;
+$config['login_record_time']    = true;
+$config['login_count_attempts'] = true;
+$config['login_max_attempts']   = 5;
+$config['login_attempt_expire'] = 60 * 60 * 24;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +87,7 @@ $config['login_attempt_expire'] = 60*60*24;
 |--------------------------------------------------------------------------
 */
 $config['autologin_cookie_name'] = 'autologin';
-$config['autologin_cookie_life'] = 60*60*24*31*2;
+$config['autologin_cookie_life'] = 60 * 60 * 24 * 31 * 2;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,7 +96,7 @@ $config['autologin_cookie_life'] = 60*60*24*31*2;
 | 'forgot_password_expire' = Time before forgot password key become invalid. Default is 15 minutes (60*15).
 |--------------------------------------------------------------------------
 */
-$config['forgot_password_expire'] = 60*15;
+$config['forgot_password_expire'] = 60 * 15;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,14 +111,14 @@ $config['forgot_password_expire'] = 60*15;
 | 'captcha_case_sensitive' = Captcha case sensitive or not.
 |--------------------------------------------------------------------------
 */
-$config['captcha_path'] = 'captcha/';
-$config['captcha_fonts_path'] = 'captcha/fonts/3.ttf';
-$config['captcha_width'] = 200;
-$config['captcha_height'] = 50;
-$config['captcha_font_size'] = 14;
-$config['captcha_grid'] = FALSE;
-$config['captcha_expire'] = 180;
-$config['captcha_case_sensitive'] = TRUE;
+$config['captcha_path']           = 'captcha/';
+$config['captcha_fonts_path']     = 'captcha/fonts/3.ttf';
+$config['captcha_width']          = 200;
+$config['captcha_height']         = 50;
+$config['captcha_font_size']      = 14;
+$config['captcha_grid']           = false;
+$config['captcha_expire']         = 180;
+$config['captcha_case_sensitive'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,8 +128,8 @@ $config['captcha_case_sensitive'] = TRUE;
 | You can get reCAPTCHA keys by registering at http://recaptcha.net
 |--------------------------------------------------------------------------
 */
-$config['use_recaptcha'] = TRUE;
-$config['recaptcha_public_key'] = 'XXXXXXXXXXXXXXXXXXXXXXXXXX';
+$config['use_recaptcha']         = true;
+$config['recaptcha_public_key']  = 'XXXXXXXXXXXXXXXXXXXXXXXXXX';
 $config['recaptcha_private_key'] = 'XXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 /*
@@ -139,7 +141,6 @@ $config['recaptcha_private_key'] = 'XXXXXXXXXXXXXXXXXXXXXXXXXX';
 |--------------------------------------------------------------------------
 */
 $config['db_table_prefix'] = '';
-
 
 /* End of file tank_auth.php */
 /* Location: ./application/config/tank_auth.php */

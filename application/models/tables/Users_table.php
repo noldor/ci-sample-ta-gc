@@ -6,7 +6,7 @@ class Users_table extends MY_Grocery_crud_model
 {
     public function db_insert($post_array)
     {
-        $post_array['created'] = $this->clock->format('Y-m-d H:i:s');
+        $post_array['created']  = $this->clock->format('Y-m-d H:i:s');
         $post_array['modified'] = $this->clock->format('Y-m-d H:i:s');
 
         $post_array['password'] = $this->hash_password($post_array['password_raw']);
@@ -32,6 +32,7 @@ class Users_table extends MY_Grocery_crud_model
         $hasher = new PasswordHash(
                 $this->config->item('phpass_hash_strength', 'tank_auth'),
                 $this->config->item('phpass_hash_portable', 'tank_auth'));
+
         return $hasher->HashPassword($password);
-   }
+    }
 }
